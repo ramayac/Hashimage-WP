@@ -138,10 +138,18 @@ function hashimage($args = ''){
  		'limit' => '5'
 	);	
 	$args = wp_parse_args($args, $defaults);
-	
 	$hashimage = new Hashimage($args);
-#	print_r($hashimage);
 	return $hashimage->html;
 }
-#wp_cache_flush();
+
+function hashimage_array($args = ''){
+	$defaults = array (
+ 		'hashtag' => 'unicorn',
+ 		'limit' => '5'
+	);	
+	$args = wp_parse_args($args, $defaults);
+	$hashimage = new Hashimage($args);
+	return $hashimage->images;
+}
+
 #print_r(hashimage('hashtag=unicorn&limit=5'));
