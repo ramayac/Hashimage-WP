@@ -1,0 +1,15 @@
+WordPress plugin for fetching images by Twitter hashtag.
+
+This is just tested on my environment, but should be alright on any WordPress 3+ installation on PHP5 with libcurl.
+
+It currently works with twitpic, instagram, yfrog, plixi, flickr, adding more services is quite easy and can be done on request. URL’s are being curled and cached for 10-12 minutes in using the standard WP_Cache.
+
+The plugin, when enabled, exposes a template tag which you can add to your theme:
+
+<?php
+if(function_exists('hashimage')){
+ echo '<ul>';
+ echo hashimage('hashtag=unicorn&limit=5');
+ echo '</ul>';
+}
+?>
