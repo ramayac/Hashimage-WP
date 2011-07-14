@@ -18,7 +18,7 @@ class Hashimage{
 		$this->_init();
 	}
 	private function _init(){
-		$resultsjson = @json_decode($this->_fetchurl($this->apiurl.$this->hashtag));
+		$resultsjson = @json_decode($this->_fetchurl($this->apiurl.$this->hashtag, 600));
 		if(isset($resultsjson) && isset($resultsjson->results)){
 			if($resultsjson->results){
 				foreach($resultsjson->results as $results){
@@ -102,7 +102,7 @@ class Hashimage{
 		}
 		return $html;
 	}
-	private function _fetchurl($url = null, $ttl = 600){
+	private function _fetchurl($url = null, $ttl = 86400){
 		if($url){
 			if(wp_cache_get(md5($url), 'hashimage') === FALSE){
 				$ch = curl_init();

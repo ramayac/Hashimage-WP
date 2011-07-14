@@ -13,3 +13,7 @@ if(function_exists('hashimage')){
  echo '</ul>';
 }
 ?>
+
+Nice-to-haves (feel free to add this!):
+- Create posts in a Custom Post Type so all images are saved locally
+- Resizer. Maybe just timthumb. 
