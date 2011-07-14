@@ -18,5 +18,6 @@ Nice-to-haves (feel free to add this!):
 - Create posts in a Custom Post Type so all images are saved locally
 - Resizer. Maybe just timthumb.
 - Meta box inside posts to allow hashtag to be set per post.
-- Settings page (width/height/alt-tags/etc)
+- Settings page (width/height/alt-tags/which image services to fetch/etc)
 - json-feed, for async call to plugin
+- nsfw-filter based on nude.js (would be awesome actually)
